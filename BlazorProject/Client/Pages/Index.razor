@@ -10,8 +10,14 @@ Welcome to your new app.
 <SurveyPrompt Title="How is Blazor working for you?" />
 
 @code {
+    /// <summary>
+    /// Creating a public property Employees to hold on to a list of employees=
+    /// </summary>
     public List<Employee> Employees { get; set; }
 
+    /// <summary>
+    /// We use this OnInitialized override method which will automatically execute when the component is completely loaded
+    /// </summary>
     protected override void OnInitialized()
     {
         Employees = LoadData();
