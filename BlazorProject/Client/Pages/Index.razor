@@ -2,12 +2,15 @@
 @using BlazorProject.Shared
 @using Syncfusion.Blazor.Grids
   
+<SfGrid DataSource="@Employees">
+    <GridColumns>
+        <GridColumn Field=@nameof(Employee.EmployeeId) HeaderText="Employee ID"></GridColumn>
+        <GridColumn Field=@nameof(Employee.FirstName) HeaderText="First Name"></GridColumn>
+        <GridColumn Field=@nameof(Employee.LastName) HeaderText=" Last Name"></GridColumn>
+        <GridColumn Field=@nameof(Employee.Email) HeaderText="Email"></GridColumn>
+    </GridColumns>
+</SfGrid>
 
-<h1>Hello, world!</h1>
-
-Welcome to your new app.
-
-<SurveyPrompt Title="How is Blazor working for you?" />
 
 @code {
     /// <summary>
