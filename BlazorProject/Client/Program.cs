@@ -15,6 +15,9 @@ namespace BlazorProject.Client
     {
         public static async Task Main(string[] args)
         {
+            //This will be used to add your registration key. SyncFusion is free for independent developers that make less than $1m per year. 
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Your_License_Key");
+
             var builder = WebAssemblyHostBuilder.CreateDefault(args);
             builder.RootComponents.Add<App>("#app");
 
